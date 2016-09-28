@@ -1,0 +1,12 @@
+version: '2'
+services:
+    codedevstuff-postgresql:
+        container_name: codedevstuff-postgresql
+        image: postgres:9.5.4
+        # volumes:
+        #     - ~/volumes/jhipster/codedevstuff/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=codedevstuff
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
