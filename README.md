@@ -2,6 +2,8 @@
 
 Code Samples for: http://codedevstuff.blogspot.com/
 
+All example code from the blog can be found in this repo and should be runnable.
+
 This application was generated using JHipster, you can find documentation and help at [https://jhipster.github.io](https://jhipster.github.io).
 
 ## Development
