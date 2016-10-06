@@ -4,7 +4,7 @@ Code Samples for: http://codedevstuff.blogspot.com/
 
 All example code from the blog can be found in this repo and should be runnable.
 
-This application was generated using JHipster, you can find documentation and help at [https://jhipster.github.io](https://jhipster.github.io).
+This application was generated using JHipster, you can find documentation and help at [https://jhipster.github.io](https://jhipster.github.io).  JHipster is a yeoman generator that will stand up a full-stack AngularJS/Twitter Bootstrap front-end and a Java/Spring REST API backend for you.
 
 ## Development
 
