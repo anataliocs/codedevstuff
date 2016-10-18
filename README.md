@@ -6,6 +6,8 @@ All example code from the blog can be found in this repo and should be runnable.
 
 This application was generated using JHipster, you can find documentation and help at [https://jhipster.github.io](https://jhipster.github.io).  JHipster is a yeoman generator that will stand up a full-stack AngularJS/Twitter Bootstrap front-end and a Java/Spring REST API backend for you.
 
+
+
 ## Development
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
@@ -32,59 +34,11 @@ Bower is used to manage CSS and JavaScript dependencies used in this application
 specifying a newer version in `bower.json`. You can also run `bower update` and `bower install` to manage dependencies.
 Add the `-h` flag on any command to see how you can use it. For example, `bower update -h`.
 
-
-## Building for production
-
-To optimize the codedevstuff client for production, run:
-
-    ./gradlew -Pprod clean bootRepackage
-
-This will concatenate and minify CSS and JavaScript files. It will also modify `index.html` so it references
-these new files.
-
-To ensure everything worked, run:
-
-    java -jar build/libs/*.war
-
-Then navigate to [http://localhost:8080](http://localhost:8080) in your browser.
-
 ## Testing
 
 Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in `src/test/javascript/` and can be run with:
 
     gulp test
-
-UI end-to-end tests are powered by [Protractor][], which is built on top of WebDriverJS. They're located in `src/test/javascript/e2e`
-and can be run by starting Spring Boot in one terminal (`./gradlew bootRun`) and running the tests (`gulp itest`) in a second one.
-
-Performance tests are run by [Gatling]() and written in Scala. They're located in `src/test/gatling` and can be run with:
-
-    ./gradlew gatlingRun
-
-    
-## Continuous Integration
-
-To setup this project in Jenkins, use the following configuration:
-
-* Project name: `codedevstuff`
-* Source Code Management
-    * Git Repository: `git@github.com:xxxx/codedevstuff.git`
-    * Branches to build: `*/master`
-    * Additional Behaviours: `Wipe out repository & force clone`
-* Build Triggers
-    * Poll SCM / Schedule: `H/5 * * * *`
-* Build
-    * Invoke Gradle script / Use Gradle Wrapper / Tasks: `-Pprod clean test bootRepackage`
-    * Execute Shell / Command:
-        ````
-        ./gradlew bootRun &
-        bootPid=$!
-        sleep 30s
-        gulp itest
-        kill $bootPid
-        ````
-* Post-build Actions
-    * Publish JUnit test result report / Test Report XMLs: `build/test-results/*.xml,build/reports/e2e/*.xml`
 
 [JHipster]: https://jhipster.github.io/
 [Gatling]: http://gatling.io/
